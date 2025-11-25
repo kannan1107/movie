@@ -15,7 +15,8 @@ const MovieCard = ({ movie }) => {
     <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
       <div className="relative">
         <img 
-          src={imgError || !isValidImageUrl(movie.Poster) ? placeholderImg : movie.Poster} 
+                    src={(movie.Poster) ?   movie.Poster : placeholderImg} 
+
           alt={movie.Title} 
           className="w-full h-80 object-cover" 
           onError={() => setImgError(true)}
